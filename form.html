@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Запис на консультацію</title>
+        <link rel='stylesheet' href="form.css">
+    </head>
+    <body>
+        <h1 id="title">Запис до терапевта</h1>
+        <p id="description">Будь ласка, заповніть форму нижче.<br>З Вами зв'яжеться менеджер для узгоднення зручної дати та часу візиту.</p>
+        <form id="survey-form" autocomplete="on">
+            <fieldset>
+                <label id="name-label">Ваше ім'я<input required type="text" id="name" placeholder="Введіть ім'я"></label>
+                <label id="name-label">Ваше прізвище<input type="text" id="surname" placeholder="Введіть прізвище"></label>
+                <label>Номер телефону<input required type="tel" autocomplete="tel" placeholder="+XX (XXX) XXX XX XX" value="+380" minlength="12"></label>
+                <label id="email-label">email <input type="email" id="email" placeholder="abc@mail.com"></label>
+                <div>
+                    <div id="age-gender">
+                        <label name="lsex">Стать</label>
+                        <label name="sex"><input checked name="sex" type="radio" class="inline"> Чоловік</label>
+                        <label name="sex"><input name="sex" type="radio" class="inline"> Жінка</label>
+                        <label name="sex"><input name="sex" type="radio" class="inline"> Волію не вказувати</label>
+                    </div>
+                    <div id="age-gender">
+                        <label id="number-label">Вкажіть Ваш вік <input required type="nubmer" min="18" max="120" minlength="2" maxlength="3" id="number" placeholder="Повних років"></label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <label>Що Вас турбує?
+                    <select required id="dropdown">
+                        <option disabled value selected>Зробіть вибір</option>
+                        <option value="1">депресія</option>
+                        <option value="2">розлади харчової поведінки (булімія, анорексія, переїдання)</option>
+                        <option value="3">важке переживання втрати</option>
+                        <option value="4">допомога дитині</option>
+                        <option value="5">тривога за здоров'я</option>
+                        <option value="6">нав'язливі думки та дії</option>
+                        <option value="7">панічний розлад</option>
+                        <option value="8">фобії</option>
+                        <option value="9">ПТСР (травма)</option>
+                        <option value="10">тривожний розлад (страх невідомості та невизначенсті)</option>
+                        <option value="11">проблеми в сімейних стосунках</option>
+                        <option value="12">проблеми у стосунках батьків і дітей</option>
+                        <option value="13">залежність від алко/нарко/стосунків</option>
+                        <option value="14">насилля</option>
+                        <option value="15">зниклі безвісти</option>
+                        <option value="16">інше</option>
+                    </select></label>
+                <label>Коротко опишіть Ваш запит <textarea cols="45" rows="5" placeholder="Опишіть, що Вас турбує"></textarea></label>
+                <label name="first"><input type="checkbox" class="inline"> Це мій перший візит до терапевта.</label>
+            </fieldset>
+            <fieldset>
+                <label>Як краще з Вами зв'язатися?
+                    <select required id="contact">
+                        <option value="">Telegram</option>
+                        <option value="">Viber</option>
+                        <option value="">WhatsApp</option>
+                        <option value="">Зателефонуйте мені</option>
+                    </select>
+                </label>
+                <label><input required type="checkbox" class="inline" id="agree"> Я підтверджую, що мені є 18 років.</label>
+                <label><input required type="checkbox" class="inline" id="agree"> Я приймаю умови <a href="https://mem-baza.ru/_ph/1/2/91192482.jpg?1600930642" target="_blank">конфіденційності</a> та <a href="https://www.meme-arsenal.com/memes/03b17132c5844015ff639c12a056075d.jpg" target="_blank">обробки персональних даних</a>.</label>
+            </fieldset>
+            <input type="submit" value="Записатися">
+        </form>
+    </body>
+</html>
